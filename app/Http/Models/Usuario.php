@@ -1,15 +1,12 @@
 <?php
 
-namespace App;
-
 use Illuminate\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract
-{
+class Usuario extends Eloquent implements AuthenticatableContract, CanResetPasswordContract {
+
     use Authenticatable, CanResetPassword;
 
     /**
@@ -17,19 +14,35 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      *
      * @var string
      */
-    protected $table = 'users';
+    protected $table = 'usuarios';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = ['nome', 'email', 'senha', 'tipo'];
 
     /**
      * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
-    protected $hidden = ['password', 'remember_token'];
+    protected $hidden = ['senha', 'remember_token'];
+
+    /**
+     * Get the password for the user.
+     *
+     * @return string
+     */
+    public function getAuthPassword()
+    {
+            return $this->senha;
+    }
+
+    // Relacionamento com artigos
+    public function artigos()
+    {
+        return $this->hasMany('Artigo');
+    }
 }

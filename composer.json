@@ -1,12 +1,13 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "oscardias/dev-laravel-5",
+    "description": "Tutorial sobre Laravel da Softerize Magazine.",
+    "keywords": ["softerize", "magazine", "tutorial", "laravel"],
     "license": "MIT",
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.1.*"
+        "laravel/framework": "5.1.*",
+        "laravelcollective/html": "5.1.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -16,7 +17,9 @@
     },
     "autoload": {
         "classmap": [
-            "database"
+            "database",
+            "app/Http/Controllers",
+            "app/Http/Models"
         ],
         "psr-4": {
             "App\\": "app/"
