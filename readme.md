@@ -1,27 +1,32 @@
-## Laravel PHP Framework
+# Desenvolvendo com Laravel - Softerize Magazine
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Este repositório é utilizando para atualizar o código referente ao tutorial [Desenvolvendo com Laravel da Softerize Magazine](http://magazine.softerize.com.br/series/desenvolvendo-com-laravel) a partir da versão 5.0 do Laravel.
+O repositório anterior, referente a versão 4.2, pode ser encontrado em [oscardias/desenvolvendo_com_laravel](https://github.com/oscardias/desenvolvendo_com_laravel).
+Você pode encontrar a tag referente a cada artigo nos releases.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Artigos
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Lista de artigos da série de tutoriais:
 
-## Official Documentation
+- [Introdução ao Laravel](http://magazine.softerize.com.br/tutoriais/php/laravel/introducao-ao-laravel)
+- [Iniciando um Novo Projeto no Laravel](http://magazine.softerize.com.br/tutoriais/php/laravel/iniciando-um-novo-projeto-laravel)
+- [Banco de Dados no Laravel](http://magazine.softerize.com.br/tutoriais/php/laravel/banco-de-dados-laravel)
+- [Laravel: Rotas e Controllers](http://magazine.softerize.com.br/tutoriais/php/laravel/laravel-rotas-e-controllers)
+- [Templates com Blade e Bootstrap no Laravel](http://magazine.softerize.com.br/tutoriais/php/laravel/templates-com-blade-e-bootstrap-laravel)
+- [Usuários e Controle de Acesso no Laravel](http://magazine.softerize.com.br/tutoriais/php/laravel/usuarios-e-controle-de-acesso-laravel)
+- [Relacionamento entre Tabelas no Laravel](http://magazine.softerize.com.br/tutoriais/php/laravel/relacionamento-entre-tabelas-laravel)
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+Outros artigos sobre o Laravel:
 
-## Contributing
+- [Migrando o Laravel de 4.2 para 5.1](http://magazine.softerize.com.br/dicas/php-dicas/laravel-php-dicas/migrando-o-laravel-de-4-2-para-5-1)
+- [Atualizando o Laravel de 4.1 para 4.2](http://magazine.softerize.com.br/dicas/php-dicas/laravel-php-dicas/atualizando-o-laravel-de-4-1-para-4-2)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+## Instalação
 
-## Security Vulnerabilities
+Para instalar a aplicação baixe a versão desejada nos releases ou clone o repositório.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+    git clone git@github.com:oscardias/dev-laravel-5.git
 
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Execute o **composer install** (caso não tenha o Composer, visite [Composer](https://getcomposer.org/)).
+Crie um banco de dados no MySQL, copie o *.env.example* para *.env* e atualize as informações necessárias.
+Para finalizer exeute **php artisan migrate** para criar as tabelas.
