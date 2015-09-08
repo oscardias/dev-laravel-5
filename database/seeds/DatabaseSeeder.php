@@ -24,10 +24,10 @@ class TabelaUsuarioSeeder extends Seeder {
 
     public function run()
     {
-        $usuarios = Usuario::get();
+        $usuarios = \App\Models\Usuario::get();
 
         if($usuarios->count() == 0) {
-            Usuario::create(array(
+            \App\Models\Usuario::create(array(
                 'email' => 'seu@email.com',
                 'senha' => Hash::make('admin'),
                 'nome'  => 'Seu Nome',
