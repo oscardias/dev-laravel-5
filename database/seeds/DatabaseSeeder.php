@@ -14,8 +14,26 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call(UserTableSeeder::class);
+        $this->call(TabelaUsuarioSeeder::class);
 
         Model::reguard();
     }
+}
+
+class TabelaUsuarioSeeder extends Seeder {
+
+    public function run()
+    {
+        $usuarios = Usuario::get();
+
+        if($usuarios->count() == 0) {
+            Usuario::create(array(
+                'email' => 'seu@email.com',
+                'senha' => Hash::make('admin'),
+                'nome'  => 'Seu Nome',
+                'tipo'  => 'admin'
+            ));
+        }
+    }
+
 }
