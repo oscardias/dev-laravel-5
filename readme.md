@@ -21,6 +21,10 @@ Outros artigos sobre o Laravel:
 - [Migrando o Laravel de 4.2 para 5.1](http://magazine.softerize.com.br/dicas/php-dicas/laravel-php-dicas/migrando-o-laravel-de-4-2-para-5-1)
 - [Atualizando o Laravel de 4.1 para 4.2](http://magazine.softerize.com.br/dicas/php-dicas/laravel-php-dicas/atualizando-o-laravel-de-4-1-para-4-2)
 
+Artigos sobre PHP (que referenciam este projeto):
+
+- [Namespaces no PHP](http://magazine.softerize.com.br/tutoriais/php/namespaces-no-php)
+
 ## Instalação
 
 Para instalar a aplicação baixe a versão desejada nos releases ou clone o repositório.
@@ -29,4 +33,5 @@ Para instalar a aplicação baixe a versão desejada nos releases ou clone o rep
 
 Execute o **composer install** (caso não tenha o Composer, visite [Composer](https://getcomposer.org/)).
 Crie um banco de dados no MySQL, copie o *.env.example* para *.env* e atualize as informações necessárias.
-Para finalizer exeute **php artisan migrate** para criar as tabelas.
+Execute **php artisan migrate** para criar as tabelas.
+E, finalmente, execute o comando **php artisan db:seed** para criar o usuário padrão.

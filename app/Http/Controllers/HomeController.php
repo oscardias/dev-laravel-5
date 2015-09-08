@@ -1,5 +1,13 @@
 <?php
 
+namespace App\Http\Controllers;
+
+use App\Models\Artigo;
+use Auth;
+use Input;
+use Redirect;
+use View;
+
 class HomeController extends Controller {
 
     public function getIndex()

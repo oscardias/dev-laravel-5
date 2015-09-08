@@ -1,5 +1,12 @@
 <?php
 
+namespace App\Http\Controllers;
+
+use App\Models\Artigo;
+use Input;
+use Redirect;
+use View;
+
 class ArtigosController extends Controller {
 
     public function getIndex()

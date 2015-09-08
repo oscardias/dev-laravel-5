@@ -1,5 +1,12 @@
 <?php
 
+namespace App\Http\Controllers;
+
+use App\Models\Usuario;
+use Input;
+use Redirect;
+use View;
+
 class UsuariosController extends Controller
 {
     public function getIndex()
